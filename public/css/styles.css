@@ -1,0 +1,36 @@
+#gitHubLink{
+    text-decoration: none;
+    color: #800080;
+    cursor: pointer;
+    font-weight: bold;
+}
+@media (max-width: 768px) {
+    img {
+      width: 100%;
+    }
+
+    .productImg{
+        margin-bottom: 15px;
+    }
+}
+
+.centerTd{
+    text-align:center; 
+    vertical-align:middle !important;
+}
+
+.clickable-row:hover{
+    cursor: pointer;
+}
+
+#longDescWrapper{
+    margin-top: 30px;
+}
+
+.checkboxgroup {
+    display: inline-block;
+    text-align: center;
+}
+.checkboxgroup label {
+    display: block;
+}

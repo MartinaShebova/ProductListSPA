@@ -1,0 +1,97 @@
+<div class="row">
+    <div class="col-sm-4 text-center">
+        <img src="{{this.image}}" width="50%" class="productImg"/>
+    </div>
+    <div class="col-sm-8 text-left">
+        <div class="panel panel-primary">
+            <div class="panel-heading text-center">
+                <strong>{{this.name}}</strong>
+            </div>
+            <div class="panel-body">
+                <div class="text-justify">{{this.shortDesc}}</div>
+            </div>
+        </div>
+        <div id="averageRatingHolder">
+            <p id="initialReviewScore"><strong class="text-danger">Average review score: </strong>0</p>
+            {{!-- Dynamically add average rating --}}
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-12">
+        <div class="well well-sm text-justify" id="longDescWrapper">
+            {{this.longDesc}}
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-12">
+        <div class="text-right">
+            <a href="#/" class="btn btn-primary">Go Back</a>
+        </div>
+    </div>
+</div>
+<br />
+<h3>Product Reviews</h3>
+<hr />
+<div id="userReviewWrapper">
+    {{!-- Dynamically create reviews --}}
+    <h5 id="emptyReviews" class="text-warning"> No Reviews for the product </h5>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <div class="well well-sm">
+                <form class="form-horizontal" id="reviewForm">
+                    <fieldset>
+                        <legend class="text-center">Submit a Review</legend>
+
+                        <!-- Name input-->
+                        <div class="form-group">
+                            <label class="col-md-3 control-label" for="name">Name</label>
+                            <div class="col-md-9">
+                                <input type="text" placeholder="Your name" class="form-control aaa" id="name" />
+                            </div>
+                        </div>
+
+                        <!-- Email input-->
+                        <div class="form-group">
+                            <label class="col-md-3 control-label" for="email">E-mail</label>
+                            <div class="col-md-9">
+                                <input id="email" type="email" placeholder="Your email" class="form-control">
+                            </div>
+                        </div>
+
+                        <!-- Review -->
+                        <div class="form-group">
+                            <label class="col-md-3 control-label" for="review">Review</label>
+                            <div class="col-md-9">
+                                <textarea class="form-control" id="review" placeholder="Please enter your reviw here..." rows="5"></textarea>
+                            </div>
+                        </div>
+
+                        <!-- Rate Product -->
+                        <div class="form-group">
+                            <label class="col-md-3 control-label" for="review">Rate Product</label>
+                            <div class="col-md-9">
+                                <div id="checkboxes">
+                                    {{#times 5}}
+                                    <div class="checkboxgroup">
+                                        <input type="radio" name="radio" id="my_radio_button_id1" value="{{this}}" />
+                                        <label for="my_radio_button_id1">{{this}}</label>
+                                    </div>
+                                    {{/times}}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-12 text-right">
+                                <button type="button" class="btn btn-primary btn-md" id="submitReviewBtn">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,33 @@
+<div class="col-md-12">
+    <table class="table table-striped table-bordered table-hover">
+        <thead>
+            <tr>
+                <th class="text-center">
+                    <div>Product Name</div>
+                </th>
+                <th class="text-center">
+                    <div>Product Image</div>
+                </th>
+                <th class="text-center">
+                    <div>Description</div>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each this}}
+            <tr class="clickable-row" data-href="#/product/{{this.id}}" value="{{this.id}}">
+                <td class="centerTd">{{this.name}}</td>
+                <td class="centerTd"><img src="{{this.image}}" width="50%" /></td>
+                <td class="centerTd text-justify">{{this.shortDesc}}</td>
+            </tr>
+            {{/each}}
+            </a>
+        </tbody>
+        <script>
+            //Make whole row clickable
+            $(".clickable-row").click(function (e) {
+                window.location = $(this).data("href");
+            });
+        </script>
+    </table>
+</div>
