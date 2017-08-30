@@ -51,10 +51,7 @@ export function reviews() {
         initialNumberOfReviews += 1;
         
         // Get total product rating
-        initialRatingScore += userRating
-
-        console.log(initialRatingScore);
-        
+        initialRatingScore += userRating        
 
         // Show the average product rating
         let avgRating = (initialRatingScore / initialNumberOfReviews).toFixed(2);

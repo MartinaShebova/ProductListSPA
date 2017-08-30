@@ -34,7 +34,7 @@ In order to start the server use
 
 `node server.js`
 
-or if you want changes to be applied after save use
+or if you want changes to be applied after save use (assuming that use have installed nodemon globally - npm install nodemon -g)
 
 `nodemon server.js`
 
